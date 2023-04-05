@@ -41,6 +41,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldPrevRadioStation() {
         Radio radio = new Radio();
@@ -53,6 +54,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldPrevToBorderRadioStation() {
         Radio radio = new Radio();
@@ -65,6 +67,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldNextToBorderRadioStation() {
         Radio radio = new Radio();
@@ -77,9 +80,10 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetVolume() {
-        Radio radio= new Radio();
+        Radio radio = new Radio();
 
         radio.setCurrentVolume(50);
 
@@ -88,9 +92,10 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldIncreaseVolume() {
-        Radio radio= new Radio();
+        Radio radio = new Radio();
         radio.setCurrentVolume(60);
 
         radio.increaseVolume();
@@ -100,9 +105,10 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldIncreaseForMaxVolume() {
-        Radio radio= new Radio();
+        Radio radio = new Radio();
         radio.setCurrentVolume(100);
 
         radio.increaseVolume();
@@ -112,9 +118,10 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDecreaseVolume() {
-        Radio radio= new Radio();
+        Radio radio = new Radio();
         radio.setCurrentVolume(50);
 
         radio.decreaseVolume();
@@ -124,9 +131,10 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDecreaseForMinVolume() {
-        Radio radio= new Radio();
+        Radio radio = new Radio();
         radio.setCurrentVolume(0);
 
         radio.decreaseVolume();
