@@ -3,6 +3,15 @@ package ru.netology.javaqa.homework;
 public class Radio {
     private int currentRadioStation;
     private int currentVolume;
+    private int maxStations;
+
+    public Radio() {
+        this.maxStations = 9;
+    }
+
+    public Radio(int countStations) {
+        this.maxStations = countStations - 1;
+    }
 
     public int getCurrentRadioStation() {
         return currentRadioStation;
@@ -12,7 +21,7 @@ public class Radio {
         if (newRadioStation < 0) {
             return;
         }
-        if (newRadioStation > 9) {
+        if (newRadioStation > maxStations) {
             return;
         }
         currentRadioStation = newRadioStation;
@@ -33,7 +42,7 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentRadioStation == 9) {
+        if (currentRadioStation == maxStations) {
             currentRadioStation = 0;
         } else {
             currentRadioStation++;
@@ -42,7 +51,7 @@ public class Radio {
 
     public void prevStation() {
         if (currentRadioStation == 0) {
-            currentRadioStation = 9;
+            currentRadioStation = maxStations;
         } else {
             currentRadioStation--;
         }
