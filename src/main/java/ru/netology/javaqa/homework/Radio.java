@@ -1,18 +1,10 @@
 package ru.netology.javaqa.homework;
 
 public class Radio {
-    public int maxRadioStations;
-    private int currentRadioStation;
-    private int currentVolume;
 
-    public Radio() {
-        this.maxRadioStations = 9;
+    public int currentRadioStation;
+    public int currentVolume;
 
-    }
-
-    public Radio(int countStations) {
-        this.maxRadioStations = countStations - 1;
-    }
 
     public int getMaxRadioStation() {
         return currentRadioStation;
@@ -26,7 +18,7 @@ public class Radio {
         if (newRadioStation < 0) {
             return;
         }
-        if (newRadioStation > maxRadioStations) {
+        if (newRadioStation > 9) {
             return;
         }
         currentRadioStation = newRadioStation;
@@ -47,7 +39,7 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentRadioStation == maxRadioStations) {
+        if (currentRadioStation == 9) {
             currentRadioStation = 0;
         } else {
             currentRadioStation++;
@@ -56,7 +48,7 @@ public class Radio {
 
     public void prevStation() {
         if (currentRadioStation == 0) {
-            currentRadioStation = maxRadioStations;
+            currentRadioStation = 9;
         } else {
             currentRadioStation--;
         }
